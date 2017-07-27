@@ -8,11 +8,11 @@
 
 import UIKit
 
-typealias PrepareBlock = (_ view: UIView) -> Void
-typealias ChangeBlock = (_ view: UIView) -> Void
-typealias CompletionBlock = (_ finished: Bool) -> Void
+public typealias PrepareBlock = (_ view: UIView) -> Void
+public typealias ChangeBlock = (_ view: UIView) -> Void
+public typealias CompletionBlock = (_ finished: Bool) -> Void
 
-struct Dizzy {
+public struct Dizzy {
     let view: UIView
 }
 
@@ -21,8 +21,8 @@ private let defaultDelay: TimeInterval = 0
 private let defaultAnimationOptions: UIViewAnimationOptions = []
 private let defaultPrepare: Bool = true
 
-extension Dizzy {
-    func animate(
+public extension Dizzy {
+    public func animate(
         _ animations: [AnimationType],
         duration: TimeInterval = defaultDuration,
         delay: TimeInterval = defaultDelay,
@@ -34,7 +34,7 @@ extension Dizzy {
         self.animate(animations, animation: animation, completion: completion)
     }
     
-    func animate(
+    public func animate(
         _ animations: [AnimationType],
         animation: Animation,
         prepare: Bool = defaultPrepare,
@@ -55,7 +55,7 @@ extension Dizzy {
         animation.animate(view: view)
     }
     
-    func prepare(with animations: [AnimationType]) {
+    public func prepare(with animations: [AnimationType]) {
         UIView.performWithoutAnimation {
             for animation in animations {
                 animation.prepareFunction(self.view)
@@ -64,8 +64,8 @@ extension Dizzy {
     }
 }
 
-extension UIView {
-    var dizzy: Dizzy {
+public extension UIView {
+    public var dizzy: Dizzy {
         return Dizzy(view: self)
     }
 }

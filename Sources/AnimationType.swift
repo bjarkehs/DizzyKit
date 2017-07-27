@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum AnimationType {
+public enum AnimationType {
     case slide(SlideDirection, Distance)
     case fadeIn
     case spin(Angle)
@@ -16,14 +16,14 @@ enum AnimationType {
     case contract(Scale)
     case custom(prepareFunction: PrepareBlock, animateFunction: ChangeBlock)
     
-    enum SlideDirection {
+    public enum SlideDirection {
         case up
         case down
         case left
         case right
     }
     
-    enum Distance {
+    public enum Distance {
         case slightly
         case moderately
         case severely
@@ -37,7 +37,7 @@ enum AnimationType {
         case toAngle(CGFloat)
     }
     
-    enum Scale {
+    public enum Scale {
         case slightly
         case moderately
         case severely

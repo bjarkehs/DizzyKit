@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol Animation {
+public protocol Animation {
     var changes: ChangeBlock? { get set}
     var completion: CompletionBlock? { get set }
     var duration: TimeInterval { get }
