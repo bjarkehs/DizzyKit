@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		51EF1DFE1F29E47100014632 /* DizzyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51EF1DF41F29E47100014632 /* DizzyKit.framework */; };
-		51EF1E031F29E47100014632 /* DizzyKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EF1E021F29E47100014632 /* DizzyKitTests.swift */; };
+		51EF1E031F29E47100014632 /* AnimationTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EF1E021F29E47100014632 /* AnimationTypeTests.swift */; };
 		51EF1E051F29E47100014632 /* DizzyKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 51EF1DF71F29E47100014632 /* DizzyKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		51EF1E191F29E71800014632 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EF1E161F29E71800014632 /* Animation.swift */; };
 		51EF1E1A1F29E71800014632 /* AnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EF1E171F29E71800014632 /* AnimationType.swift */; };
 		51EF1E1B1F29E71800014632 /* Dizzy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EF1E181F29E71800014632 /* Dizzy.swift */; };
 		51EF1E1F1F2A04C100014632 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EF1E1E1F2A04C100014632 /* Settings.swift */; };
+		51EF1E211F2A15B300014632 /* AnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EF1E201F2A15B300014632 /* AnimationTests.swift */; };
+		51EF1E231F2A199900014632 /* DizzyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EF1E221F2A199900014632 /* DizzyTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,12 +33,14 @@
 		51EF1DF71F29E47100014632 /* DizzyKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DizzyKit.h; sourceTree = "<group>"; };
 		51EF1DF81F29E47100014632 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51EF1DFD1F29E47100014632 /* DizzyKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DizzyKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		51EF1E021F29E47100014632 /* DizzyKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DizzyKitTests.swift; sourceTree = "<group>"; };
+		51EF1E021F29E47100014632 /* AnimationTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationTypeTests.swift; sourceTree = "<group>"; };
 		51EF1E041F29E47100014632 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51EF1E161F29E71800014632 /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		51EF1E171F29E71800014632 /* AnimationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationType.swift; sourceTree = "<group>"; };
 		51EF1E181F29E71800014632 /* Dizzy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dizzy.swift; sourceTree = "<group>"; };
 		51EF1E1E1F2A04C100014632 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		51EF1E201F2A15B300014632 /* AnimationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationTests.swift; sourceTree = "<group>"; };
+		51EF1E221F2A199900014632 /* DizzyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DizzyTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +93,9 @@
 		51EF1E011F29E47100014632 /* DizzyKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				51EF1E021F29E47100014632 /* DizzyKitTests.swift */,
+				51EF1E201F2A15B300014632 /* AnimationTests.swift */,
+				51EF1E021F29E47100014632 /* AnimationTypeTests.swift */,
+				51EF1E221F2A199900014632 /* DizzyTests.swift */,
 				51EF1E041F29E47100014632 /* Info.plist */,
 			);
 			path = DizzyKitTests;
@@ -228,7 +234,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51EF1E031F29E47100014632 /* DizzyKitTests.swift in Sources */,
+				51EF1E231F2A199900014632 /* DizzyTests.swift in Sources */,
+				51EF1E211F2A15B300014632 /* AnimationTests.swift in Sources */,
+				51EF1E031F29E47100014632 /* AnimationTypeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
