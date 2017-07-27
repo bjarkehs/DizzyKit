@@ -24,14 +24,14 @@ private let defaultDamping: CGFloat = 0.5
 private let defaultVelocity: CGFloat = 0.7
 private let defaultAnimationOptions: UIViewAnimationOptions = []
 
-struct StandardAnimation: Animation {
-    var changes: ChangeBlock?
-    var completion: CompletionBlock?
-    let duration: TimeInterval
-    let delay: TimeInterval
-    let animationOptions: UIViewAnimationOptions
+public struct StandardAnimation: Animation {
+    public var changes: ChangeBlock?
+    public var completion: CompletionBlock?
+    public let duration: TimeInterval
+    public let delay: TimeInterval
+    public let animationOptions: UIViewAnimationOptions
     
-    init(
+    public init(
         duration: TimeInterval = defaultDuration,
         delay: TimeInterval = defaultDelay,
         options: UIViewAnimationOptions = defaultAnimationOptions
@@ -41,7 +41,7 @@ struct StandardAnimation: Animation {
         self.animationOptions = options
     }
     
-    func animate(view: UIView) {
+    public func animate(view: UIView) {
         UIView.animate(
             withDuration: duration,
             delay: delay,
@@ -54,16 +54,16 @@ struct StandardAnimation: Animation {
     }
 }
 
-struct SpringAnimation: Animation {
-    var changes: ChangeBlock?
-    var completion: CompletionBlock?
-    let duration: TimeInterval
-    let delay: TimeInterval
-    let animationOptions: UIViewAnimationOptions
-    let damping: CGFloat
-    let velocity: CGFloat
+public struct SpringAnimation: Animation {
+    public var changes: ChangeBlock?
+    public var completion: CompletionBlock?
+    public let duration: TimeInterval
+    public let delay: TimeInterval
+    public let animationOptions: UIViewAnimationOptions
+    public let damping: CGFloat
+    public let velocity: CGFloat
     
-    init(
+    public init(
         duration: TimeInterval = defaultDuration,
         delay: TimeInterval = defaultDelay,
         damping: CGFloat = defaultDamping,
@@ -77,7 +77,7 @@ struct SpringAnimation: Animation {
         self.animationOptions = options
     }
     
-    func animate(view: UIView) {
+    public func animate(view: UIView) {
         UIView.animate(
             withDuration: duration,
             delay: delay,
