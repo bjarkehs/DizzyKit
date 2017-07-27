@@ -19,7 +19,7 @@ public struct Dizzy {
 private let defaultDuration: TimeInterval = 0.3
 private let defaultDelay: TimeInterval = 0
 private let defaultAnimationOptions: UIViewAnimationOptions = []
-private let defaultPrepare: Bool = true
+private let defaultPrepare: Bool = false
 
 public extension Dizzy {
     public func animate(
@@ -33,7 +33,7 @@ public extension Dizzy {
         let animation = StandardAnimation(duration: duration, delay: delay, options: options)
         self.animate(animations, animation: animation, completion: completion)
     }
-    
+
     public func animate(
         _ animations: [AnimationType],
         animation: Animation,
@@ -43,7 +43,7 @@ public extension Dizzy {
         if prepare {
             self.prepare(with: animations)
         }
-        
+
         var animation = animation
         animation.changes = { view in
             for animation in animations {
@@ -54,7 +54,7 @@ public extension Dizzy {
         animation.completion = completion
         animation.animate(view: view)
     }
-    
+
     public func prepare(with animations: [AnimationType]) {
         UIView.performWithoutAnimation {
             for animation in animations {
