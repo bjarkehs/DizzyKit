@@ -16,20 +16,15 @@ public struct Dizzy {
     let view: UIView
 }
 
-private let defaultDuration: TimeInterval = 0.3
-private let defaultDelay: TimeInterval = 0
-private let defaultAnimationOptions: UIViewAnimationOptions = []
-private let defaultPrepare: Bool = false
-
 public extension Dizzy {
     public func animate(
         _ animations: [AnimationType],
-        duration: TimeInterval = defaultDuration,
-        delay: TimeInterval = defaultDelay,
-        options: UIViewAnimationOptions = defaultAnimationOptions,
-        prepare: Bool = defaultPrepare,
-        completion: CompletionBlock? = nil
-        ) {
+        duration: TimeInterval = Settings.Animation.duration,
+        delay: TimeInterval = Settings.Animation.delay,
+        options: UIViewAnimationOptions = Settings.Animation.options,
+        prepare: Bool = Settings.prepare,
+        completion: CompletionBlock? = nil)
+    {
         let animation = StandardAnimation(duration: duration, delay: delay, options: options)
         self.animate(animations, animation: animation, completion: completion)
     }
@@ -37,9 +32,9 @@ public extension Dizzy {
     public func animate(
         _ animations: [AnimationType],
         animation: Animation,
-        prepare: Bool = defaultPrepare,
-        completion: CompletionBlock? = nil
-        ) {
+        prepare: Bool = Settings.prepare,
+        completion: CompletionBlock? = nil)
+    {
         if prepare {
             self.prepare(with: animations)
         }

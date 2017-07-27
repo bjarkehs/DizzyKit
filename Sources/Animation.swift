@@ -18,12 +18,6 @@ public protocol Animation {
     func animate(view: UIView)
 }
 
-private let defaultDuration: TimeInterval = 0.3
-private let defaultDelay: TimeInterval = 0
-private let defaultDamping: CGFloat = 0.5
-private let defaultVelocity: CGFloat = 0.7
-private let defaultAnimationOptions: UIViewAnimationOptions = []
-
 public struct StandardAnimation: Animation {
     public var changes: ChangeBlock?
     public var completion: CompletionBlock?
@@ -31,11 +25,7 @@ public struct StandardAnimation: Animation {
     public let delay: TimeInterval
     public let animationOptions: UIViewAnimationOptions
     
-    public init(
-        duration: TimeInterval = defaultDuration,
-        delay: TimeInterval = defaultDelay,
-        options: UIViewAnimationOptions = defaultAnimationOptions
-        ) {
+    public init(duration: TimeInterval, delay: TimeInterval, options: UIViewAnimationOptions) {
         self.duration = duration
         self.delay = delay
         self.animationOptions = options
@@ -48,7 +38,7 @@ public struct StandardAnimation: Animation {
             options: animationOptions,
             animations: {
                 self.changes?(view)
-        },
+            },
             completion: completion
         )
     }
@@ -64,12 +54,12 @@ public struct SpringAnimation: Animation {
     public let velocity: CGFloat
     
     public init(
-        duration: TimeInterval = defaultDuration,
-        delay: TimeInterval = defaultDelay,
-        damping: CGFloat = defaultDamping,
-        velocity: CGFloat = defaultVelocity,
-        options: UIViewAnimationOptions = defaultAnimationOptions
-        ) {
+        duration: TimeInterval,
+        delay: TimeInterval,
+        damping: CGFloat,
+        velocity: CGFloat,
+        options: UIViewAnimationOptions)
+    {
         self.duration = duration
         self.delay = delay
         self.damping = damping
@@ -86,7 +76,7 @@ public struct SpringAnimation: Animation {
             options: animationOptions,
             animations: {
                 self.changes?(view)
-        },
+            },
             completion: completion
         )
     }
