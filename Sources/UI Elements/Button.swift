@@ -19,24 +19,7 @@ open class Button: UIButton {
             guard highlighted != oldValue else {
                 return
             }
-            let changes: ChangeBlock = { [weak self] view in
-                guard let strongSelf = self else { return }
-                
-                for animation in strongSelf.animations {
-                    let animationFunc: ChangeBlock
-                    if highlighted {
-                        animationFunc = animation.prepareFunction
-                    } else {
-                        animationFunc = animation.animationFunction
-                    }
-                    
-                    animationFunc(view)
-                }
-                
-            }
-            var animation = self.animation
-            animation.changes = changes
-            animation.animate(view: self)
+            self.dizzy.animate(self.animations, animation: self.animation, prepare: false, reversed: isHighlighted)
         }
     }
 }

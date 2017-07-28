@@ -23,6 +23,7 @@ public extension Dizzy {
         delay: TimeInterval = Settings.Animation.delay,
         options: UIViewAnimationOptions = Settings.Animation.options,
         prepare: Bool = Settings.prepare,
+        reversed: Bool = Settings.reversed,
         completion: CompletionBlock? = nil)
     {
         let animation = StandardAnimation(duration: duration, delay: delay, options: options)
@@ -33,6 +34,7 @@ public extension Dizzy {
         _ animations: [AnimationType],
         animation: Animation,
         prepare: Bool = Settings.prepare,
+        reversed: Bool = Settings.reversed,
         completion: CompletionBlock? = nil)
     {
         if prepare {
@@ -42,18 +44,25 @@ public extension Dizzy {
         var animation = animation
         animation.changes = { view in
             for animation in animations {
-                let animationFunc = animation.animationFunction
-                animationFunc(view)
+                if reversed {
+                    animation.prepareFunction(view)
+                } else {
+                    animation.animationFunction(view)
+                }
             }
         }
         animation.completion = completion
         animation.animate(view: view)
     }
 
-    public func prepare(with animations: [AnimationType]) {
+    public func prepare(with animations: [AnimationType], reversed: Bool = Settings.reversed) {
         UIView.performWithoutAnimation {
             for animation in animations {
-                animation.prepareFunction(self.view)
+                if reversed {
+                    animation.animationFunction(self.view)
+                } else {
+                    animation.prepareFunction(self.view)
+                }
             }
         }
     }

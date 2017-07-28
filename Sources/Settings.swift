@@ -10,6 +10,7 @@ import UIKit
 
 public struct Settings {
     public static var prepare: Bool = false
+    public static var reversed: Bool = false
     public struct Animation {
         public static var duration: TimeInterval = 0.3
         public static var delay: TimeInterval = 0
