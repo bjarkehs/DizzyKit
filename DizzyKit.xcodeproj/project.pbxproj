@@ -16,6 +16,8 @@
 		51EF1E1F1F2A04C100014632 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EF1E1E1F2A04C100014632 /* Settings.swift */; };
 		51EF1E211F2A15B300014632 /* AnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EF1E201F2A15B300014632 /* AnimationTests.swift */; };
 		51EF1E231F2A199900014632 /* DizzyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EF1E221F2A199900014632 /* DizzyTests.swift */; };
+		51EF1E271F2B2A2F00014632 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EF1E261F2B2A2F00014632 /* UIView.swift */; };
+		51EF1E291F2B2A7500014632 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EF1E281F2B2A7500014632 /* Button.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,8 @@
 		51EF1E1E1F2A04C100014632 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		51EF1E201F2A15B300014632 /* AnimationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationTests.swift; sourceTree = "<group>"; };
 		51EF1E221F2A199900014632 /* DizzyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DizzyTests.swift; sourceTree = "<group>"; };
+		51EF1E261F2B2A2F00014632 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		51EF1E281F2B2A7500014632 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,9 +112,19 @@
 				51EF1E171F29E71800014632 /* AnimationType.swift */,
 				51EF1E181F29E71800014632 /* Dizzy.swift */,
 				51EF1E1E1F2A04C100014632 /* Settings.swift */,
+				51EF1E251F2B2A1B00014632 /* UI Elements */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
+		};
+		51EF1E251F2B2A1B00014632 /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				51EF1E281F2B2A7500014632 /* Button.swift */,
+				51EF1E261F2B2A2F00014632 /* UIView.swift */,
+			);
+			path = "UI Elements";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -223,6 +237,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51EF1E271F2B2A2F00014632 /* UIView.swift in Sources */,
+				51EF1E291F2B2A7500014632 /* Button.swift in Sources */,
 				51EF1E1A1F29E71800014632 /* AnimationType.swift in Sources */,
 				51EF1E191F29E71800014632 /* Animation.swift in Sources */,
 				51EF1E1F1F2A04C100014632 /* Settings.swift in Sources */,

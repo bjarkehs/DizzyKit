@@ -58,9 +58,3 @@ public extension Dizzy {
         }
     }
 }
-
-public extension UIView {
-    public var dizzy: Dizzy {
-        return Dizzy(view: self)
-    }
-}
