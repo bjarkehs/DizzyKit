@@ -34,6 +34,7 @@ open class Button: UIButton {
                 }
                 
             }
+            var animation = self.animation
             animation.changes = changes
             animation.animate(view: self)
         }
