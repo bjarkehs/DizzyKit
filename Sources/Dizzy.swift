@@ -27,7 +27,7 @@ public extension Dizzy {
         completion: CompletionBlock? = nil)
     {
         let animation = StandardAnimation(duration: duration, delay: delay, options: options)
-        self.animate(animations, animation: animation, prepare: prepare, completion: completion)
+        self.animate(animations, animation: animation, prepare: prepare, reversed: reversed, completion: completion)
     }
 
     public func animate(
@@ -38,7 +38,7 @@ public extension Dizzy {
         completion: CompletionBlock? = nil)
     {
         if prepare {
-            self.prepare(with: animations)
+            self.prepare(with: animations, reversed: reversed)
         }
 
         var animation = animation
