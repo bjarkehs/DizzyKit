@@ -1,4 +1,4 @@
-# DizzyKit
+# DizzyKit [![Build Status](https://travis-ci.org/bjarkehs/DizzyKit.svg?branch=master)](https://travis-ci.org/bjarkehs/DizzyKit)
 Simple animation library that allows you to easily animate things.
 
 This framework is heavily inspired by [Spruce](https://github.com/willowtreeapps/spruce-ios).
