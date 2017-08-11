@@ -1,4 +1,4 @@
 language: objective-c
 osx_image: xcode8.3
-xcode_project: DizzyKit.xcodeproj
-xcode_scheme: DizzyKit
+
+script: xcodebuild clean build test -project DizzyKit.xcodeproj -scheme DizzyKit -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.3' CODE_SIGNING_REQUIRED=NO
