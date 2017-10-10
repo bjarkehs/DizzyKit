@@ -63,8 +63,8 @@ class AnimationTypeTests: XCTestCase {
         XCTAssertNotEqual(view.frame.origin.x, frameBefore.origin.x)
         XCTAssertNotEqual(view.frame.size.width, frameBefore.size.width)
         XCTAssertNotEqual(view.frame.size.height, frameBefore.size.height)
-        XCTAssertEqualWithAccuracy(view.frame.size.width, frameBefore.size.width * scale, accuracy: 0.00001)
-        XCTAssertEqualWithAccuracy(view.frame.size.height, frameBefore.size.height * scale, accuracy: 0.00001)
+        XCTAssertEqual(view.frame.size.width, frameBefore.size.width * scale, accuracy: 0.00001)
+        XCTAssertEqual(view.frame.size.height, frameBefore.size.height * scale, accuracy: 0.00001)
         
         animation.animationFunction(view)
         XCTAssertEqual(view.frame, frameBefore)
@@ -82,8 +82,8 @@ class AnimationTypeTests: XCTestCase {
         XCTAssertNotEqual(view.frame.origin.x, frameBefore.origin.x)
         XCTAssertNotEqual(view.frame.size.width, frameBefore.size.width)
         XCTAssertNotEqual(view.frame.size.height, frameBefore.size.height)
-        XCTAssertEqualWithAccuracy(view.frame.size.width, frameBefore.size.width * scale, accuracy: 0.00001)
-        XCTAssertEqualWithAccuracy(view.frame.size.height, frameBefore.size.height * scale, accuracy: 0.00001)
+        XCTAssertEqual(view.frame.size.width, frameBefore.size.width * scale, accuracy: 0.00001)
+        XCTAssertEqual(view.frame.size.height, frameBefore.size.height * scale, accuracy: 0.00001)
         
         animation.animationFunction(view)
         XCTAssertEqual(view.frame, frameBefore)
