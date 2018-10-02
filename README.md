@@ -31,6 +31,16 @@ pod 'DizzyKit', '~> 2.0'
 
 Then run `pod install`.
 
+### Carthage
+
+Add the following to your Cartfile:
+
+```sh
+github "bjarkehs/DizzyKit" ~> 2.0
+```
+
+Then run `carthage update`.
+
 ## Usage
 
 ```swift
