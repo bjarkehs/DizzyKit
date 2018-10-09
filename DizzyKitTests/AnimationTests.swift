@@ -13,7 +13,7 @@ class AnimationTests: XCTestCase {
     func testStandardAnimation() {
         let duration = 0.2
         let delay = 0.1
-        let options: UIViewAnimationOptions = [.curveEaseInOut]
+        let options: UIView.AnimationOptions = [.curveEaseInOut]
         var animation = StandardAnimation(duration: duration, delay: delay, options: options)
         XCTAssertEqual(animation.duration, duration)
         XCTAssertEqual(animation.delay, delay)
@@ -42,7 +42,7 @@ class AnimationTests: XCTestCase {
         let delay = 0.1
         let damping: CGFloat = 0.2
         let velocity: CGFloat = 0.3
-        let options: UIViewAnimationOptions = [.curveEaseInOut]
+        let options: UIView.AnimationOptions = [.curveEaseInOut]
         var animation = SpringAnimation(duration: duration, delay: delay, damping: damping, velocity: velocity, options: options)
         XCTAssertEqual(animation.duration, duration)
         XCTAssertEqual(animation.delay, delay)
