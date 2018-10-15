@@ -21,7 +21,7 @@ public extension Dizzy {
         _ animations: [AnimationType],
         duration: TimeInterval = Settings.Animation.duration,
         delay: TimeInterval = Settings.Animation.delay,
-        options: UIViewAnimationOptions = Settings.Animation.options,
+        options: UIView.AnimationOptions = Settings.Animation.options,
         prepare: Bool = Settings.prepare,
         reversed: Bool = Settings.reversed,
         completion: CompletionBlock? = nil)

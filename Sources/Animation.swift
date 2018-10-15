@@ -13,7 +13,7 @@ public protocol Animation {
     var completion: CompletionBlock? { get set }
     var duration: TimeInterval { get }
     var delay: TimeInterval { get }
-    var animationOptions: UIViewAnimationOptions { get }
+    var animationOptions: UIView.AnimationOptions { get }
     
     func animate(view: UIView)
 }
@@ -23,9 +23,9 @@ public struct StandardAnimation: Animation {
     public var completion: CompletionBlock?
     public let duration: TimeInterval
     public let delay: TimeInterval
-    public let animationOptions: UIViewAnimationOptions
+    public let animationOptions: UIView.AnimationOptions
     
-    public init(duration: TimeInterval, delay: TimeInterval, options: UIViewAnimationOptions) {
+    public init(duration: TimeInterval, delay: TimeInterval, options: UIView.AnimationOptions) {
         self.duration = duration
         self.delay = delay
         self.animationOptions = options
@@ -49,7 +49,7 @@ public struct SpringAnimation: Animation {
     public var completion: CompletionBlock?
     public let duration: TimeInterval
     public let delay: TimeInterval
-    public let animationOptions: UIViewAnimationOptions
+    public let animationOptions: UIView.AnimationOptions
     public let damping: CGFloat
     public let velocity: CGFloat
     
@@ -58,7 +58,7 @@ public struct SpringAnimation: Animation {
         delay: TimeInterval,
         damping: CGFloat,
         velocity: CGFloat,
-        options: UIViewAnimationOptions)
+        options: UIView.AnimationOptions)
     {
         self.duration = duration
         self.delay = delay

@@ -16,6 +16,6 @@ public struct Settings {
         public static var delay: TimeInterval = 0
         public static var damping: CGFloat = 0.5
         public static var velocity: CGFloat = 0.7
-        public static var options: UIViewAnimationOptions = []
+        public static var options: UIView.AnimationOptions = []
     }
 }
