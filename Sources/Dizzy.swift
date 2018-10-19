@@ -38,7 +38,9 @@ public extension Dizzy {
         completion: CompletionBlock? = nil)
     {
         if prepare {
-            self.prepare(with: animations, reversed: reversed)
+            DispatchQueue.main.async {
+                self.prepare(with: animations, reversed: reversed)
+            }
         }
 
         var animation = animation
@@ -52,7 +54,9 @@ public extension Dizzy {
             }
         }
         animation.completion = completion
-        animation.animate(view: view)
+        DispatchQueue.main.async {
+            animation.animate(view: self.view)
+        }
     }
 
     public func prepare(with animations: [AnimationType], reversed: Bool = Settings.reversed) {
