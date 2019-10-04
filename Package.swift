@@ -12,7 +12,8 @@ let package = Package(
     targets: [
          .target(
             name: "DizzyKit",
-            dependencies: [])
+            dependencies: [],
+            path: "Sources")
     ],
     swiftLanguageVersions: [.v4, .v4_2, .v5]
 )
