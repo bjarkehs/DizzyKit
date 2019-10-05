@@ -1,4 +1,4 @@
-# DizzyKit [![Build Status](https://travis-ci.org/bjarkehs/DizzyKit.svg?branch=master)](https://travis-ci.org/bjarkehs/DizzyKit)
+# DizzyKit [![Build Status](https://travis-ci.org/bjarkehs/DizzyKit.svg?branch=master)](https://travis-ci.org/bjarkehs/DizzyKit) [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/DizzyKit.svg)](https://img.shields.io/cocoapods/v/DizzyKit.svg) [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 Simple animation library that allows you to easily animate things.
 
