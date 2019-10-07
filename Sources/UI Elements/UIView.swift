@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UIView {
-    public var dizzy: Dizzy {
+    var dizzy: Dizzy {
         return Dizzy(view: self)
     }
 }

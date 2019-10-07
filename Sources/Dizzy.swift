@@ -17,7 +17,7 @@ public struct Dizzy {
 }
 
 public extension Dizzy {
-    public func animate(
+    func animate(
         _ animations: [AnimationType],
         duration: TimeInterval = Settings.Animation.duration,
         delay: TimeInterval = Settings.Animation.delay,
@@ -30,7 +30,7 @@ public extension Dizzy {
         self.animate(animations, animation: animation, prepare: prepare, reversed: reversed, completion: completion)
     }
 
-    public func animate(
+    func animate(
         _ animations: [AnimationType],
         animation: Animation,
         prepare: Bool = Settings.prepare,
@@ -59,7 +59,7 @@ public extension Dizzy {
         }
     }
 
-    public func prepare(with animations: [AnimationType], reversed: Bool = Settings.reversed) {
+    func prepare(with animations: [AnimationType], reversed: Bool = Settings.reversed) {
         UIView.performWithoutAnimation {
             for animation in animations {
                 if reversed {
