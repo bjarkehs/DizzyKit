@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.license      = 'MIT'
   s.author       = { 'Bjarke Hesthaven Søndergaard' => 'bhsgaard@gmail.com' }
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
 
   s.source       = { :git => 'https://github.com/bjarkehs/DizzyKit.git', :tag => "#{s.version}" }
 
