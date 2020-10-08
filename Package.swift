@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "DizzyKit",
     platforms: [
-      .iOS(.v8)
+      .iOS(.v10)
     ],
     products: [
         .library(name: "DizzyKit", targets: ["DizzyKit"])
@@ -15,7 +15,7 @@ let package = Package(
             dependencies: [],
             path: "Sources")
     ],
-    swiftLanguageVersions: [.v4, .v4_2, .v5]
+    swiftLanguageVersions: [.v5]
 )
 
 let version = Version(2, 0, 1)
