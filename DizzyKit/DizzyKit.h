@@ -3,7 +3,7 @@
 //  DizzyKit
 //
 //  Created by Bjarke Hesthaven Søndergaard on 27/07/2017.
-//  Copyright © 2017 BjarkeHS. All rights reserved.
+//  Copyright © 2020 BjarkeHS. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
