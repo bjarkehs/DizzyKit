@@ -7,7 +7,8 @@ The reason I made this is because I needed a framework to do animations without 
 
 The framework attempts to be compatible with latest version of Swift.
 Please check the Swift version matrix to see which version supports your Swift version.
-The last verified version of Swift is 4.2 but it may still compile on later versions.
+The last verified version of Swift is 5.3 but it may still compile on later versions.
+The lowest version of iOS supported is 10.
 
 ## Installation
 
@@ -18,6 +19,7 @@ your Swift version.
 
 | Swift | DizzyKit |
 | ----- | -------- |
+| 5.X   | 3.X      |
 | 4.X   | 2.X      |
 | 3.X   | 1.X      |
 
@@ -26,7 +28,7 @@ your Swift version.
 Use the following entry in your Podfile:
 
 ```rb
-pod 'DizzyKit', '~> 2.0'
+pod 'DizzyKit', '~> 3.0'
 ```
 
 Then run `pod install`.
@@ -36,7 +38,7 @@ Then run `pod install`.
 Add the following to your Cartfile:
 
 ```sh
-github "bjarkehs/DizzyKit" ~> 2.0
+github "bjarkehs/DizzyKit" ~> 3.0
 ```
 
 Then run `carthage update`.
