@@ -1,4 +1,4 @@
-# DizzyKit [![Build Status](https://travis-ci.org/bjarkehs/DizzyKit.svg?branch=master)](https://travis-ci.org/bjarkehs/DizzyKit) [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/DizzyKit.svg)](https://img.shields.io/cocoapods/v/DizzyKit.svg) [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+# DizzyKit [![Build Status](https://travis-ci.org/bjarkehs/DizzyKit.svg?branch=master)](https://travis-ci.org/bjarkehs/DizzyKit) [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/DizzyKit.svg)](https://img.shields.io/cocoapods/v/DizzyKit.svg) [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 
 Simple animation library that allows you to easily animate things.
 
@@ -42,6 +42,14 @@ github "bjarkehs/DizzyKit" ~> 3.0
 ```
 
 Then run `carthage update`.
+
+### Swift Package Manager
+
+To install DizzyKit without Xcode UI, add the following to your `Package.swift`:
+
+```swift
+.package(url: "https://github.com/bjarkehs/DizzyKit.git", .upToNextMajor(from: "3.0.0"))
+```
 
 ## Usage
 
